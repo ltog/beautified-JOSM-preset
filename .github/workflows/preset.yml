@@ -22,7 +22,7 @@ jobs:
     - name: Install xmlstarlet
       run: sudo apt-get -y install xmlstarlet  librsvg2-bin
     - name: Check for tabs in master_preset.xml
-      run: '! grep -P "\t" master_preset.xml'
+      run: '! grep -n -P "\t" master_preset.xml'
     - name: Check with Gradle
       run: ./gradlew check
     - name: Run unit tests
